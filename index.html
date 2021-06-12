@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+  <!--<![endif]-->
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Pacifico"
+    />
+  </head>
+  <body>
+    <div class="modal">
+      <form action="">
+        <label for="title">Title</label>
+        <input type="text" name="title" id="title" />
+        <label for="author">Author</label>
+        <input type="text" name="author" id="author" />
+        <label for="pageNumber">How many pages</label>
+        <input type="text" name="pageNumber" id="pageNumber" />
+        <label for="readStatus">Have you finished reading?</label>
+        <input type="checkbox" name="readStatus" id="readStatus" />
+        <button type="button" onclick="console.log(this)">Add Book</button>
+      </form>
+    </div>
+    <div class="container">
+      <header>
+        <div class="brand">MyLibrary</div>
+        <hr />
+      </header>
+
+      <div class="library"></div>
+    </div>
+
+    <!--[if lt IE 7]>
+      <p class="browsehappy">
+        You are using an <strong>outdated</strong> browser. Please
+        <a href="#">upgrade your browser</a> to improve your experience.
+      </p>
+    <![endif]-->
+
+    <script src="library.js"></script>
+  </body>
+</html>

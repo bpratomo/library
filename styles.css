@@ -1,0 +1,66 @@
+.modal{
+    display: none;
+}
+
+.container{
+    padding-left: 5em;
+    padding-right: 5em;
+    padding-top: 3em;
+
+}
+
+.brand  {
+    font-family: 'Pacifico';
+    font-size:xx-large;
+}
+
+
+.library{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 4rem;
+}
+
+.bookData{
+    
+    width: 150px;
+    /* height: 80px; */
+    border-radius: 10%;
+    text-align: left;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    flex-basis: 1;
+    flex-shrink: 1;
+}
+
+.bookCover{
+    flex-basis: 2;
+    max-height: 60%;
+    max-width: 100%;
+    object-fit: cover;
+
+}
+
+.bookCover img {
+width: 100%;
+height: 100%;
+    object-fit: cover;
+    object-position: top;
+
+    
+}
+
+.book{
+    display: flex;
+    flex-direction: column;
+    height: 350px;
+    width: 180px;
+    border-style: solid;
+    background-color: white;
+    margin: 1em;
+    
+}
+
+body{
+    background-color: lightgoldenrodyellow;
+}
