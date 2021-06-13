@@ -23,10 +23,10 @@ function Book(
     <img src="https://images-na.ssl-images-amazon.com/images/I/61+NT0zxLdL._SY344_BO1,204,203,200_.jpg" />   
     </div>
 
-    <div class="bookData">
+    <div class="bookData ${this.readStatus}">
     <h4>${this.title}</h4>
     <p>
-    Author: ${this.author}
+    By: ${this.author} <br>
     Number of pages: ${this.numberOfPages}    
     </p>
     <div
@@ -48,11 +48,31 @@ function Book(
 
 function addBookToLibrary(title, author, numberOfPages, readStatus) {
   let library = document.getElementsByClassName("library")[0];
-  let bookToPush = new Book(title, author);
+  let bookToPush = new Book(title, author, numberOfPages, readStatus);
   let divToCreate = bookToPush.toDiv();
   myLibrary.push(bookToPush);
   library.appendChild(divToCreate);
   console.log(myLibrary);
 }
 
-addBookToLibrary("Harry Potter", "JKROWLING");
+let addButton = document.querySelector(".button__add");
+addButton.addEventListener("click", (e) => {
+  document.querySelector(".overlay").style.display = "flex";
+});
+
+let overlay = document.querySelector(".overlay");
+overlay.addEventListener("click", (e) => {
+  if (
+    e.target.classList.contains("overlay") ||
+    e.target.classList.contains("button__close")
+  ) {
+    overlay.style.display = "none";
+  }
+});
+
+addBookToLibrary(
+  "Harry Potter and The Cursed Child",
+  "J.K. Rowling",
+  245,
+  "unread"
+);

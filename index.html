@@ -16,29 +16,49 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css?family=Pacifico"
     />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Varela"
+    />
   </head>
   <body>
-    <div class="modal">
-      <form action="">
-        <label for="title">Title</label>
-        <input type="text" name="title" id="title" />
-        <label for="author">Author</label>
-        <input type="text" name="author" id="author" />
-        <label for="pageNumber">How many pages</label>
-        <input type="text" name="pageNumber" id="pageNumber" />
-        <label for="readStatus">Have you finished reading?</label>
-        <input type="checkbox" name="readStatus" id="readStatus" />
+    <div class="overlay">
+      <div class="modal">
+        <h2>Add new book</h2>
+        <button class="button__close">X</button>
+
+        <label for="title"
+          >Title
+          <input type="text" name="title" id="title" />
+        </label>
+        <label for="author"
+          >Author <input type="text" name="author" id="author"
+        /></label>
+        <label for="pageNumber"
+          >How many pages <input type="number" name="pageNumber" id="pageNumber"
+        /></label>
+        <label for="readStatus"
+          >Have you finished reading?
+          <input type="checkbox" name="readStatus" id="readStatus"
+        /></label>
         <button type="button" onclick="console.log(this)">Add Book</button>
-      </form>
+      </div>
     </div>
+
     <div class="container">
       <header>
+        <img
+          src="https://cdn2.iconfinder.com/data/icons/education-378/96/Book-512.png"
+          alt=""
+        />
         <div class="brand">MyLibrary</div>
-        <hr />
       </header>
+      <hr />
 
       <div class="library"></div>
     </div>
+
+    <button class="button__add">+</button>
 
     <!--[if lt IE 7]>
       <p class="browsehappy">

@@ -1,5 +1,29 @@
-.modal{
-    display: none;
+/***************************************** */
+/* Part 1: General */
+/***************************************** */
+
+p {
+    font-size: small;
+}
+
+
+body{
+    margin: 0px;
+    font-family: "Varela";
+}
+
+header{
+    display: flex;
+}
+
+header > img {
+    height: 60px;
+}
+
+
+.brand  {
+    font-family: 'Pacifico';
+    font-size:xx-large;
 }
 
 .container{
@@ -8,12 +32,9 @@
     padding-top: 3em;
 
 }
-
-.brand  {
-    font-family: 'Pacifico';
-    font-size:xx-large;
-}
-
+/***************************************** */
+/* Part 2: Library */
+/***************************************** */
 
 .library{
     display: flex;
@@ -22,16 +43,17 @@
 }
 
 .bookData{
-    
-    width: 150px;
-    /* height: 80px; */
-    border-radius: 10%;
-    text-align: left;
     padding-left: 0.5em;
     padding-right: 0.5em;
     flex-basis: 1;
     flex-shrink: 1;
 }
+
+.bookData > h4 {
+    font-size: smaller;
+}
+
+
 
 .bookCover{
     flex-basis: 2;
@@ -55,12 +77,85 @@ height: 100%;
     flex-direction: column;
     height: 350px;
     width: 180px;
-    border-style: solid;
     background-color: white;
     margin: 1em;
+    border: 1px solid rgba(0,0,0,.125);
+    box-shadow: 10px 5px 5px rgba(0,0,0,.125);
     
 }
 
-body{
-    background-color: lightgoldenrodyellow;
+
+/***************************************** */
+/* Part 3: Add book form */
+/***************************************** */
+
+.modal{
+    background: white;
+    box-shadow: 5px 5px 5px rgba(0,0,0,.125);
+    padding: 1rem 3rem;
+    text-align: start;
+    border: solid 1px #d3d3d3;
+    border-radius: 5px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.modal h2{
+    text-align: center;
+    
+}
+
+label{
+    margin-bottom: 20px;
+}
+
+input{
+    display: block;
+    max-width: 100%;
+    margin-top: 5px;
+    height:calc(1.5em + 0.75rem + 2px);
+    padding:0.375rem 0.75rem;
+    border-radius: 5px;
+    border: solid 1px lightgrey;
+}
+
+.button__add{
+    background-color: coral;
+    border-style: none;
+    border-radius: 50%;
+    position: fixed;
+    height: 50px;
+    width:50px;
+    box-shadow: 10px 5px 5px rgba(0,0,0,.125);
+    font-size: xx-large;
+    bottom: 20px;
+    right: 20px;
+    cursor: pointer;
+
+}
+
+.button__close{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    font-size: x-large;
+    background: none;
+    border: none;
+    cursor: pointer;
+
+}
+
+.overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,.125); /* Black background with opacity */
+    backdrop-filter: blur(2px);
+    display: flex;
+    align-items: center;
+
 }
