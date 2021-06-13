@@ -22,7 +22,7 @@
     />
   </head>
   <body>
-    <div class="overlay">
+    <div class="overlay noshow">
       <div class="modal">
         <h2>Add new book</h2>
         <button class="button__close">X</button>
@@ -30,14 +30,23 @@
         <label for="title"
           >Title
           <input type="text" name="title" id="title" />
+          <div class="validation" id="title-validation">
+            Book title is invalid and required
+          </div>
         </label>
         <label for="author"
-          >Author <input type="text" name="author" id="author" required
-        /></label>
+          >Author <input type="text" name="author" id="author" />
+          <div class="validation" id="author-validation">
+            *Book author is invalid and required
+          </div>
+        </label>
         <label for="pageNumber"
           >How many pages
-          <input type="number" name="pageNumber" id="pageNumber" required
-        /></label>
+          <input type="number" name="pageNumber" id="pageNumber" />
+          <div class="validation" id="author-validation">
+            *Number of pages is invalid and required
+          </div>
+        </label>
         <label for="readStatus"
           >Have you finished reading?
           <input type="checkbox" name="readStatus" id="readStatus" required
