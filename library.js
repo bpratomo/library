@@ -60,6 +60,8 @@ addButton.addEventListener("click", (e) => {
   document.querySelector(".overlay").style.display = "flex";
 });
 
+
+
 let overlay = document.querySelector(".overlay");
 overlay.addEventListener("click", (e) => {
   if (
@@ -69,6 +71,23 @@ overlay.addEventListener("click", (e) => {
     overlay.style.display = "none";
   }
 });
+
+function addBookFromForm() {
+  let tempBook = []
+  let inputs = document.querySelectorAll("input")
+  inputs.forEach((element) => {
+    tempBook.push(element.value)
+    console.log(tempBook)
+  })
+
+  let [title, author, numberOfPages, readStatus] = tempBook
+  addBookToLibrary(title,author,numberOfPages,readStatus)
+  
+}
+
+
+
+
 
 addBookToLibrary(
   "Harry Potter and The Cursed Child",

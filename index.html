@@ -32,16 +32,17 @@
           <input type="text" name="title" id="title" />
         </label>
         <label for="author"
-          >Author <input type="text" name="author" id="author"
+          >Author <input type="text" name="author" id="author" required
         /></label>
         <label for="pageNumber"
-          >How many pages <input type="number" name="pageNumber" id="pageNumber"
+          >How many pages
+          <input type="number" name="pageNumber" id="pageNumber" required
         /></label>
         <label for="readStatus"
           >Have you finished reading?
-          <input type="checkbox" name="readStatus" id="readStatus"
+          <input type="checkbox" name="readStatus" id="readStatus" required
         /></label>
-        <button type="button" onclick="console.log(this)">Add Book</button>
+        <button type="button" onclick="addBookFromForm()">Add Book</button>
       </div>
     </div>
 
